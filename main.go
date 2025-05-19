@@ -14,21 +14,23 @@ func main() {
 	fmt.Print("Give the other number: ")
 	fmt.Scan(&num2)
 
+	fmt.Println(SEPARATOR)
 	fmt.Println(APP_NAME)
+	fmt.Println(SEPARATOR)
 
 	add := num1 + num2
-	fmt.Printf("add: %.2f\n", add)
+	fmt.Printf("Add: %.2f\n", add)
 	fmt.Println(SEPARATOR)
 
 	multiply := num1 * num2
-	fmt.Printf("multiply: %.2f\n", multiply)
+	fmt.Printf("Multiply: %.2f\n", multiply)
 	fmt.Println(SEPARATOR)
 
 	division := num1 / num2
-	fmt.Printf("division: %.2f\n", division)
+	fmt.Printf("Division: %.2f\n", division)
 	fmt.Println(SEPARATOR)
 
 	subtraction := num1 - num2
-	fmt.Printf("subtraction: %.2f\n", subtraction)
+	fmt.Printf("Subtraction: %.2f\n", subtraction)
 	fmt.Println(SEPARATOR)
 }
