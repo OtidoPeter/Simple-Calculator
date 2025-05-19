@@ -3,21 +3,28 @@ package main
 import "fmt"
 
 func main() {
-	var number int
-	var otherNumber float64
+	const APP_NAME = "GoCalc 1.0"
+	const SEPARATOR = "------------------"
+	var num1 float64
+	var num2 float64
 
 	fmt.Print("Give the number: ")
-	fmt.Scan(&number)
+	fmt.Scan(&num1)
 
 	fmt.Print("Give the other number: ")
-	fmt.Scan(&otherNumber)
+	fmt.Scan(&num2)
 
-	add := number + int(otherNumber)
-	fmt.Println(add)
+	fmt.Println(APP_NAME)
 
-	multiply := number * int(otherNumber)
-	fmt.Println(multiply)
+	add := num1 + num2
+	fmt.Printf("add: %.2f\n", add)
+	fmt.Println(SEPARATOR)
 
-	division := number / int(otherNumber)
-	fmt.Println(division)
+	multiply := num1 * num2
+	fmt.Printf("multiply: %.2f\n", multiply)
+	fmt.Println(SEPARATOR)
+
+	division := num1 / num2
+	fmt.Printf("division: %.2f\n", division)
+	fmt.Println(SEPARATOR)
 }
