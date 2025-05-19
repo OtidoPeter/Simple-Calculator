@@ -27,4 +27,8 @@ func main() {
 	division := num1 / num2
 	fmt.Printf("division: %.2f\n", division)
 	fmt.Println(SEPARATOR)
+
+	subtraction := num1 - num2
+	fmt.Printf("subtraction: %.2f\n", subtraction)
+	fmt.Println(SEPARATOR)
 }
