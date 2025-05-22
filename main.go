@@ -48,7 +48,7 @@ func main() {
 
 func getUserInput(infoText string) float64 {
 	var userInput float64
-	fmt.Print("Give the number: ")
+	fmt.Print(infoText)
 	fmt.Scan(&userInput)
 	return userInput
 }
