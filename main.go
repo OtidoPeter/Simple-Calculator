@@ -25,5 +25,5 @@ func main() {
 
 	subtraction := numOne - numTwo
 
-	fmt.Printf("Sum: %v\nProduct: %v\nQuotient: %v\nDifference: %v\n", addition, multiplication, division, subtraction)
+	fmt.Printf("Sum: %.2f\nProduct: %.2f\nQuotient: %.2f\nDifference: %.2f\n", addition, multiplication, division, subtraction)
 }
