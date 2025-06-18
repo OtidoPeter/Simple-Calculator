@@ -25,5 +25,11 @@ func main() {
 
 	subtraction := numOne - numTwo
 
-	fmt.Printf("Sum: %.2f\nProduct: %.2f\nQuotient: %.2f\nDifference: %.2f\n", addition, multiplication, division, subtraction)
+	formattedAdd := fmt.Sprintf("Sum: %.2f\n", addition)
+	formattedMult := fmt.Sprintf("Product: %.2f\n", multiplication)
+	formattedDiv := fmt.Sprintf("Quotient: %.2f\n", division)
+	formattedSub := fmt.Sprintf("Difference: %.2f\n", subtraction)
+
+	// fmt.Printf("Sum: %.2f\nProduct: %.2f\nQuotient: %.2f\nDifference: %.2f\n", addition, multiplication, division, subtraction)
+	fmt.Print(formattedAdd, formattedMult, formattedDiv, formattedSub)
 }
