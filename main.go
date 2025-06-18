@@ -18,14 +18,12 @@ func main() {
 	fmt.Scan(&numTwo)
 
 	addition := numOne + numTwo
-	fmt.Println(addition)
 
 	multiplication := numOne * numTwo
-	fmt.Println(multiplication)
 
 	division := numOne / numTwo
-	fmt.Println(division)
 
 	subtraction := numOne - numTwo
-	fmt.Println(subtraction)
+
+	fmt.Printf("Sum: %v\nProduct: %v\nQuotient: %v\nDifference: %v\n", addition, multiplication, division, subtraction)
 }
