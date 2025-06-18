@@ -3,62 +3,29 @@ package main
 import "fmt"
 
 func main() {
-	const APP_NAME = "GoCalc 1.0"
-	const SEPARATOR = "------------------"
-	var num1 float64
-	var num2 float64
-	num1 = getUserInput("Give the number: ")
-	//fmt.Print("Give the number: ")
-	// fmt.Scan(&num1)
+	const appName = "Go - Calculator"
+	const separator = "---------------"
+	var numOne float64
+	var numTwo float64
 
-	num2 = getUserInput("Give the other number: ")
-	// fmt.Print("Give the other number: ")
-	// fmt.Scan(&num2)
+	fmt.Println(appName)
+	fmt.Println(separator)
 
-	fmt.Println(SEPARATOR)
-	fmt.Println(APP_NAME)
-	fmt.Println(SEPARATOR)
+	fmt.Print("Enter your first number here: ")
+	fmt.Scan(&numOne)
 
-	add, multiply, division, subtraction := operations(num1, num2)
-	fmt.Printf("Add: %.2f\n", add)
-	fmt.Println(SEPARATOR)
-	fmt.Printf("Multiply: %.2f\n", multiply)
-	fmt.Println(SEPARATOR)
-	fmt.Printf("Division: %.2f\n", division)
-	fmt.Println(SEPARATOR)
-	fmt.Printf("Subtraction: %.2f\n", subtraction)
-	fmt.Println(SEPARATOR)
+	fmt.Print("Enter your second number here: ")
+	fmt.Scan(&numTwo)
 
-	/*add := num1 + num2
-	fmt.Printf("Add: %.2f\n", add)
-	fmt.Println(SEPARATOR)
+	addition := numOne + numTwo
+	fmt.Println(addition)
 
-	multiply := num1 * num2
-	fmt.Printf("Multiply: %.2f\n", multiply)
-	fmt.Println(SEPARATOR)
+	multiplication := numOne * numTwo
+	fmt.Println(multiplication)
 
-	division := num1 / num2
-	fmt.Printf("Division: %.2f\n", division)
-	fmt.Println(SEPARATOR)
+	division := numOne / numTwo
+	fmt.Println(division)
 
-	subtraction := num1 - num2
-	fmt.Printf("Subtraction: %.2f\n", subtraction)
-	fmt.Println(SEPARATOR)*/
-}
-
-func getUserInput(infoText string) float64 {
-	var userInput float64
-	fmt.Print(infoText)
-	fmt.Scan(&userInput)
-	return userInput
-}
-
-func operations(num1, num2 float64) (float64, float64, float64, float64) {
-
-	operationsMultiply := num1 * num2
-	operationsAdd := num1 + num2
-	operationsDiv := num1 / num2
-	operationsSubt := num1 - num2
-	return operationsMultiply, operationsAdd, operationsDiv, operationsSubt
-
+	subtraction := numOne - numTwo
+	fmt.Println(subtraction)
 }

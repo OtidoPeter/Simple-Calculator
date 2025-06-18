@@ -1,1 +1,1 @@
-A simple calculator that does multiplication, division, addition and subtraction coupled with continous improvement.
+Getting to understand functions better and how to create them. A simple calculator that does a lot of operations and could be continuously improved.
