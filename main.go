@@ -2,9 +2,10 @@ package main
 
 import "fmt"
 
+const appName = "Go - Calculator"
+const separator = "---------------"
+
 func main() {
-	const appName = "Go - Calculator"
-	const separator = "---------------"
 	var numOne float64
 	var numTwo float64
 
@@ -12,13 +13,14 @@ func main() {
 	fmt.Println(separator)
 
 	// fmt.Print("Enter your first number here: ")
-	outputText("Enter your first number here: ")
+	outputText("Enter number here: ")
 	fmt.Scan(&numOne)
 
 	// fmt.Print("Enter your second number here: ")
-	outputText("Enter your second number here: ")
+	outputText("Enter number here: ")
 	fmt.Scan(&numTwo)
 
+	operations(numOne, numTwo)
 	addition := numOne + numTwo
 
 	multiplication := numOne * numTwo
@@ -45,4 +47,13 @@ func main() {
 
 func outputText(text string) {
 	fmt.Print(text)
+}
+
+func operations(numOne, numTwo float64) (float64, float64, float64, float64) {
+	add := numOne + numTwo
+	mult := numOne * numTwo
+	div := numOne / numTwo
+	subt := numOne - numTwo
+
+	return add, mult, div, subt
 }
