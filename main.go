@@ -20,14 +20,14 @@ func main() {
 	outputText("Enter number here: ")
 	fmt.Scan(&numTwo)
 
-	operations(numOne, numTwo)
-	addition := numOne + numTwo
+	addition, multiplication, division, subtraction := operations(numOne, numTwo)
+	// addition := numOne + numTwo
 
-	multiplication := numOne * numTwo
+	// multiplication := numOne * numTwo
 
-	division := numOne / numTwo
+	// division := numOne / numTwo
 
-	subtraction := numOne - numTwo
+	// subtraction := numOne - numTwo
 
 	formattedAdd := fmt.Sprintf("Sum: %.2f\n", addition)
 	formattedMult := fmt.Sprintf("Product: %.2f\n", multiplication)
