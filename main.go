@@ -49,11 +49,11 @@ func outputText(text string) {
 	fmt.Print(text)
 }
 
-func operations(numOne, numTwo float64) (float64, float64, float64, float64) {
-	add := numOne + numTwo
-	mult := numOne * numTwo
-	div := numOne / numTwo
-	subt := numOne - numTwo
+func operations(numOne, numTwo float64) (add float64, mult float64, div float64, subt float64) {
+	add = numOne + numTwo
+	mult = numOne * numTwo
+	div = numOne / numTwo
+	subt = numOne - numTwo
 
 	return add, mult, div, subt
 }
