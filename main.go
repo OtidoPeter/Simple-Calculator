@@ -13,12 +13,12 @@ func main() {
 	fmt.Println(separator)
 
 	// fmt.Print("Enter your first number here: ")
-	outputText("Enter number here: ")
-	fmt.Scan(&numOne)
+	numOne = getUserInput("Enter number here: ")
+	// fmt.Scan(&numOne)
 
 	// fmt.Print("Enter your second number here: ")
-	outputText("Enter number here: ")
-	fmt.Scan(&numTwo)
+	numTwo = getUserInput("Enter number here: ")
+	// fmt.Scan(&numTwo)
 
 	operations(numOne, numTwo)
 	// addition := numOne + numTwo
@@ -39,8 +39,12 @@ func main() {
 	*/
 }
 
-func outputText(text string) {
-	fmt.Print(text)
+func getUserInput(infoText string) float64 {
+	var userInput float64
+	fmt.Print(infoText)
+	fmt.Scan(&userInput)
+
+	return userInput
 }
 
 func operations(numOne, numTwo float64) (float64, float64, float64, float64) {
