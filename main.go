@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-const appName = "Go - Calculator"
-const separator = "---------------"
+const appName = " Welcome to the Go - Calculator"
+const separator = "-------------------------------"
 
 func main() {
 	var numOne float64
@@ -11,6 +11,8 @@ func main() {
 
 	fmt.Println(appName)
 	fmt.Println(separator)
+
+	fmt.Println("What operation do you want to carry out?")
 
 	// fmt.Print("Enter your first number here: ")
 	numOne = getUserInput("Enter number here: ")
@@ -20,7 +22,11 @@ func main() {
 	numTwo = getUserInput("Enter number here: ")
 	// fmt.Scan(&numTwo)
 
-	operations(numOne, numTwo)
+	//operations(numOne, numTwo)
+	add(numOne, numTwo)
+	subtract(numOne, numTwo)
+	multiply(numOne, numTwo)
+	divide(numOne, numTwo)
 	// addition := numOne + numTwo
 
 	// multiplication := numOne * numTwo
@@ -47,19 +53,49 @@ func getUserInput(infoText string) float64 {
 	return userInput
 }
 
-func operations(numOne, numTwo float64) (float64, float64, float64, float64) {
+/*
+	func operations(numOne, numTwo float64) (float64, float64, float64, float64) {
+		addition := numOne + numTwo
+		multiplication := numOne * numTwo
+		division := numOne / numTwo
+		subtraction := numOne - numTwo
+
+		formattedAdd := fmt.Sprintf("Sum: %.2f\n", addition)
+		formattedMult := fmt.Sprintf("Product: %.2f\n", multiplication)
+		formattedDiv := fmt.Sprintf("Quotient: %.2f\n", division)
+		formattedSub := fmt.Sprintf("Difference: %.2f\n", subtraction)
+
+		fmt.Print(formattedAdd, formattedMult, formattedDiv, formattedSub)
+
+		return addition, multiplication, division, subtraction
+		// return
+	}
+*/
+func add(numOne, numTwo float64) float64 {
 	addition := numOne + numTwo
-	multiplication := numOne * numTwo
-	division := numOne / numTwo
+	reformattedAdd := fmt.Sprintf("Sum: %.1f\n", addition)
+	fmt.Print(reformattedAdd)
+
+	return addition
+}
+func subtract(numOne, numTwo float64) float64 {
 	subtraction := numOne - numTwo
+	reformattedSubt := fmt.Sprintf("Difference: %.1f\n", subtraction)
+	fmt.Print(reformattedSubt)
 
-	formattedAdd := fmt.Sprintf("Sum: %.2f\n", addition)
-	formattedMult := fmt.Sprintf("Product: %.2f\n", multiplication)
-	formattedDiv := fmt.Sprintf("Quotient: %.2f\n", division)
-	formattedSub := fmt.Sprintf("Difference: %.2f\n", subtraction)
+	return subtraction
+}
+func multiply(numOne, numTwo float64) float64 {
+	multiplication := numOne * numTwo
+	reformattedMult := fmt.Sprintf("Product: %.1f\n", multiplication)
+	fmt.Print(reformattedMult)
 
-	fmt.Print(formattedAdd, formattedMult, formattedDiv, formattedSub)
+	return multiplication
+}
+func divide(numOne, numTwo float64) float64 {
+	division := numOne / numTwo
+	reformattedDiv := fmt.Sprintf("Quotient: %.1f\n", division)
+	fmt.Print(reformattedDiv)
 
-	return addition, multiplication, division, subtraction
-	// return
+	return division
 }
