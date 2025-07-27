@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"example.com/Simple-Calculator/fileops"
+)
 
 func operations(numOne, numTwo float64) {
 	var choice int
@@ -12,22 +16,22 @@ func operations(numOne, numTwo float64) {
 		addition := numOne + numTwo
 		reformattedAdd := fmt.Sprintf("Sum: %.1f\n", addition)
 		fmt.Print(reformattedAdd)
-		writeFloatToFile(responseFileName, addition)
+		fileops.WriteFloatToFile(responseFileName, addition)
 	case 2:
 		subtraction := numOne - numTwo
 		reformattedSubt := fmt.Sprintf("Difference: %.1f\n", subtraction)
 		fmt.Print(reformattedSubt)
-		writeFloatToFile(responseFileName, subtraction)
+		fileops.WriteFloatToFile(responseFileName, subtraction)
 	case 3:
 		multiplication := numOne * numTwo
 		reformattedMult := fmt.Sprintf("Product: %.1f\n", multiplication)
 		fmt.Print(reformattedMult)
-		writeFloatToFile(responseFileName, multiplication)
+		fileops.WriteFloatToFile(responseFileName, multiplication)
 	case 4:
 		division := numOne / numTwo
 		reformattedDiv := fmt.Sprintf("Quotient: %.1f\n", division)
 		fmt.Print(reformattedDiv)
-		writeFloatToFile(responseFileName, division)
+		fileops.WriteFloatToFile(responseFileName, division)
 	default:
 		fmt.Println("Goodbye! Thank you for choosing our calculator.")
 		return

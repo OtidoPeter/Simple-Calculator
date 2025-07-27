@@ -3,15 +3,9 @@ package main
 import (
 	"errors"
 	"fmt"
-	"os"
 )
 
 const responseFileName = "response.txt"
-
-func writeFloatToFile(fileName string, value float64) {
-	valueText := fmt.Sprint(value)
-	os.WriteFile(fileName, []byte(valueText), 0644)
-}
 
 func main() {
 	var numOne float64
