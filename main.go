@@ -8,9 +8,9 @@ import (
 
 const responseFileName = "response.txt"
 
-func writeResponseToFile(response float64) {
-	responseText := fmt.Sprint(response)
-	os.WriteFile(responseFileName, []byte(responseText), 0644)
+func writeFloatToFile(fileName string, value float64) {
+	valueText := fmt.Sprint(value)
+	os.WriteFile(fileName, []byte(valueText), 0644)
 }
 
 func main() {
