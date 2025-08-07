@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"example.com/project-practice/fileops"
+	"example.com/Simple-Calculator/fileops"
 )
 
 const resultsFileName = "results.txt"
